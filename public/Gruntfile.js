@@ -106,6 +106,12 @@ module.exports = function(grunt) {
                 src: ['<%= dirs.js %>common/*.js'],
                 dest: '<%= dirs.dest_path %>',
                 expand: true
+            },
+            assets: {
+                cwd: './assets/images',
+                src: ['*'],
+                dest: '<%= dirs.dest_path %>images/',
+                expand: true
             }
 
         },
@@ -349,6 +355,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'express',
         'copy:test',
+        'copy:assets',
         'less',
         'livescript',
         'browserify',
@@ -356,6 +363,7 @@ module.exports = function(grunt) {
     ]);
     grunt.registerTask('ready', [
         'copy:test',
+        'copy:assets',
         'less',
         'livescript',
         'uglify',

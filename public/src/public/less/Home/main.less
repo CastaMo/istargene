@@ -1,1 +1,144 @@
 @import "../common";
+#pic-rotate-display {
+    background-color: @shallow-grey-color;
+    padding-top: 8px;
+    .pic-rotate-display-wrapper {
+        width: 1023px;
+        margin: 0 auto;
+        .pic-display-field {
+            position: relative;
+            ul {
+                .transition(0.3s);
+                width: 3070px;
+                height: 435px;
+                li {
+                    .background-size(1023px, 435px);
+                    float: left;
+                }
+            }
+            .arrow-field {
+                > * {
+                    cursor: pointer;
+                    .background-norm();
+                    .background-size(50px, 60px);
+                }
+                .left-arrow {
+                    left: 0;
+                }
+                .right-arrow {
+                    right: 0;
+                }
+            }
+        }
+        .pic-controll-field {
+            width: 100%;
+            height: 56px;
+            position: relative;
+            ul {
+                .parallel-container;
+                li {
+                    margin: 0 6px;
+                    height: 30px;
+                    width: 60px;
+                    cursor: pointer;
+                    .bar {
+                        margin-top: 12.5px;
+                        height: 5px;
+                        width: 100%;
+                        background-color: @choose-grey-color;
+                    }
+                    &.active {
+                        .bar {
+                            background-color: @purple-red-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#talent-intro {
+    padding-top: 48px;
+    min-width: 1023px;
+    background-color: @shallow-white-color;
+    .talent-intro-wrapper {
+        width: 1023px;
+        margin: 0 auto;
+        text-align: center;
+        .all-talent-field {
+            .all-talent-list {
+                .parallel-container;
+                li {
+                    cursor: pointer;
+                    width: 150px;
+                    margin: 0 25px;
+                    .pic-field {
+                        line-height: 25px;
+                        color: #808E8C;
+                        .pic {
+                            .background-size(150px, 75px);
+                            .background-norm();
+                        }
+                    }
+                    .word-field {
+                        margin: 20px 10px 0 10px;
+                        line-height: 18.667px;
+                        font-size: 12px;
+                        height: 112px;
+                        width: 130px;
+                        color: #777777;
+                    }
+                    .btn-field {
+                        height: 60px;
+                        .btn {
+                            width: 150px;
+                            padding: 0;
+                            line-height: 48px;
+                            background-color: @shallow-green-color;
+                            p {
+                                color: #fff;
+                                font-size: 20px;
+                            }
+                            -webkit-box-shadow: inset 0px 1px 0px #61BEBC,
+                            0px 4px 0px #61BEBC;
+                            -moz-box-shadow: inset 0px 1px 0px #61BEBC,
+                            0px 4px 0px #61BEBC;
+                            -o-box-shadow: inset 0px 1px 0px #61BEBC,
+                            0px 4px 0px #61BEBC;
+                            box-shadow: inset 0px 1px 0px #61BEBC,
+                            0px 4px 0px #61BEBC;
+                        }
+                    }
+                    &:hover {
+                        .btn {
+                            background-color: @purple-red-color;
+                            -webkit-box-shadow: inset 0px 1px 0px #E1544B, 0px 4px 0px #E1544B;
+                            -moz-box-shadow: inset 0px 1px 0px #E1544B, 0px 4px 0px #E1544B;
+                            -o-box-shadow: inset 0px 1px 0px #E1544B, 0px 4px 0px #E1544B;
+                            box-shadow: inset 0px 1px 0px #E1544B, 0px 4px 0px #E1544B;
+                        }
+                    }
+                }
+            }
+        }
+        .click-purchase-field {
+            width: 100%;
+            height: 95px;
+            position: relative;
+            margin-top: 20px;
+            .purchase-btn {
+                line-height: 55px;
+                background-color: @purple-red-color;
+                -webkit-box-shadow: inset 0px 1px 0px #E1544B, 0px 4px 0px #E1544B;
+                -moz-box-shadow: inset 0px 1px 0px #E1544B, 0px 4px 0px #E1544B;
+                -o-box-shadow: inset 0px 1px 0px #E1544B, 0px 4px 0px #E1544B;
+                box-shadow: inset 0px 1px 0px #E1544B, 0px 4px 0px #E1544B;
+                color: white;
+                padding: 0;
+                width: 200px;
+                font-size: 25px;
+            }
+        }
+    }
+}
