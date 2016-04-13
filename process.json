@@ -1,0 +1,13 @@
+{
+	"apps":[{
+		"name":"istargene",
+		"script":"bin/www",
+		"log_date_format": "MM-DD HH:mm:SS",
+		"log_file": "logs/istargene.log",
+		"error_file":"logs/istargene_error.log",
+		"out_file": "logs/istargene_out.log",
+		"pid_file": "logs/istargene.pid",
+		"exec_mode":"cluster_mode",
+		"watch": ["./"] 
+	}]
+}
