@@ -1,0 +1,5 @@
+bin/
+
+node_modules/
+
+../secret_for_formal.json
