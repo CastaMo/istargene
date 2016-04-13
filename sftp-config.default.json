@@ -1,0 +1,28 @@
+{
+    "type": "sftp",
+
+    "save_before_upload": true,
+    "upload_on_save": false,
+    "sync_down_on_open": false,
+    "sync_skip_deletes": false,
+    "sync_same_age": true,
+    "confirm_downloads": false,
+    "confirm_sync": true,
+    "confirm_overwrite_newer": false,
+    
+    "host": "123.56.253.115",
+    "user": "root",
+    "password": "",
+    "port": "22",
+    
+    "remote_path": "/root/Project/istargene",
+    "ignore_regexes": [
+        "\\.sublime-(project|workspace)", "sftp-config(-alt\\d?)?\\.json",
+        "sftp-settings\\.json", "/venv/", "\\.svn/", "\\.hg/", "\\.git/",
+        "\\.bzr", "_darcs", "CVS", "\\.DS_Store", "Thumbs\\.db", "desktop\\.ini",
+        "node_modules/",
+        "public/node_modules/"
+    ],
+
+    "connect_timeout": 30,
+}
