@@ -106,13 +106,6 @@ module.exports = function(grunt) {
                 src: ['<%= dirs.js %>common/*.js'],
                 dest: '<%= dirs.dest_path %>',
                 expand: true
-            },
-
-            backup: {
-                cwd: '../braeco_client',
-                src: ['**/*', '!./node_modules/*'],
-                dest: '../backup/braeco_client',
-                expand: true
             }
 
         },
@@ -125,34 +118,29 @@ module.exports = function(grunt) {
                 },
                 pretty: true
             },
-            manage_test: {
+            home_test: {
                 files: {
-                    "<%= dirs.dest_path %>CanteenManage.html": "<%= dirs.source_path %><%= dirs.jade %>CanteenManage/develop.jade"
+                    "<%= dirs.dest_path %>Home/Home.html": "<%= dirs.source_path %><%= dirs.jade %>Home/develop.jade"
                 }
             },
-            manage_dist: {
+            product_test: {
                 files: {
-                    "<%= dirs.dist_path %>CanteenManage.php": "<%= dirs.source_path %><%= dirs.jade %>CanteenManage/formal.jade"
+                    "<%= dirs.dest_path %>Product/Product.html": "<%= dirs.source_path %><%= dirs.jade %>Product/develop.jade"
                 }
             },
-            menu_category_test: {
+            service_test: {
                 files: {
-                    "<%= dirs.dest_path %>CanteenManageMenu/Category/Category.html": "<%= dirs.source_path %><%= dirs.jade %>CanteenManageMenu/Category/develop.jade"
+                    "<%= dirs.dest_path %>Service/Service.html": "<%= dirs.source_path %><%= dirs.jade %>Service/develop.jade"
                 }
             },
-            menu_category_dist: {
+            coverage_test: {
                 files: {
-                    "<%= dirs.dist_path %>CanteenManageMenu/Category/Category.php": "<%= dirs.source_path %><%= dirs.jade %>CanteenManageMenu/Category/formal.jade"
+                    "<%= dirs.dest_path %>Coverage/Coverage.html": "<%= dirs.source_path %><%= dirs.jade %>Coverage/develop.jade"
                 }
             },
-            menu_food_single_test: {
+            about_test: {
                 files: {
-                    "<%= dirs.dest_path %>CanteenManageMenu/Food/Single/Single.html": "<%= dirs.source_path %><%= dirs.jade %>CanteenManageMenu/Food/Single/develop.jade"
-                }
-            },
-            business_hallOrder_basic_test: {
-                files: {
-                    "<%= dirs.dest_path %>CanteenManageBusiness/HallOrder/Basic/Basic.html": "<%= dirs.source_path %><%= dirs.jade %>CanteenManageBusiness/HallOrder/Basic/develop.jade"
+                    "<%= dirs.dest_path %>About/About.html": "<%= dirs.source_path %><%= dirs.jade %>About/develop.jade"
                 }
             }
         },
@@ -161,33 +149,34 @@ module.exports = function(grunt) {
                 compress: false,
                 yuicompress: false
             },
-            common: {
+            home_test: {
                 files: {
-                    "<%= dirs.dest_path %><%= dirs.css %>common/common.css": "<%= dirs.source_path %><%= dirs.less %>common/common.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>Home/main.css": "<%= dirs.source_path %><%= dirs.less %>Home/main.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>Home/base64.css": "<%= dirs.source_path %><%= dirs.less %>Home/base64.less"
                 }
             },
-            manage_test: {
+            product_test: {
                 files: {
-                    "<%= dirs.dest_path %><%= dirs.css %>CanteenManage/main.css": "<%= dirs.source_path %><%= dirs.less %>CanteenManage/main.less",
-                    "<%= dirs.dest_path %><%= dirs.css %>CanteenManage/base64.css": "<%= dirs.source_path %><%= dirs.less %>CanteenManage/base64.less"
+                    "<%= dirs.dest_path %><%= dirs.css %>Product/main.css": "<%= dirs.source_path %><%= dirs.less %>Product/main.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>Product/base64.css": "<%= dirs.source_path %><%= dirs.less %>Product/base64.less"
                 }
             },
-            menu_category_test: {
+            service_test: {
                 files: {
-                    "<%= dirs.dest_path %><%= dirs.css %>CanteenManageMenu/Category/main.css": "<%= dirs.source_path %><%= dirs.less %>CanteenManageMenu/Category/main.less",
-                    "<%= dirs.dest_path %><%= dirs.css %>CanteenManageMenu/Category/base64.css": "<%= dirs.source_path %><%= dirs.less %>CanteenManageMenu/Category/base64.less"
+                    "<%= dirs.dest_path %><%= dirs.css %>Service/main.css": "<%= dirs.source_path %><%= dirs.less %>Service/main.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>Service/base64.css": "<%= dirs.source_path %><%= dirs.less %>Service/base64.less"
                 }
             },
-            menu_food_single_test: {
+            coverage_test: {
                 files: {
-                    "<%= dirs.dest_path %><%= dirs.css %>CanteenManageMenu/Food/Single/main.css": "<%= dirs.source_path %><%= dirs.less %>CanteenManageMenu/Food/Single/main.less",
-                    "<%= dirs.dest_path %><%= dirs.css %>CanteenManageMenu/Food/Single/base64.css": "<%= dirs.source_path %><%= dirs.less %>CanteenManageMenu/Food/Single/base64.less"
+                    "<%= dirs.dest_path %><%= dirs.css %>Coverage/main.css": "<%= dirs.source_path %><%= dirs.less %>Coverage/main.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>Coverage/base64.css": "<%= dirs.source_path %><%= dirs.less %>Coverage/base64.less"
                 }
             },
-            business_hallOrder_basic_test: {
+            about_test: {
                 files: {
-                    "<%= dirs.dest_path %><%= dirs.css %>CanteenManageBusiness/HallOrder/Basic/main.css": "<%= dirs.source_path %><%= dirs.less %>CanteenManageBusiness/HallOrder/Basic/main.less",
-                    "<%= dirs.dest_path %><%= dirs.css %>CanteenManageBusiness/HallOrder/Basic/base64.css": "<%= dirs.source_path %><%= dirs.less %>CanteenManageBusiness/HallOrder/Basic/base64.less"
+                    "<%= dirs.dest_path %><%= dirs.css %>About/main.css": "<%= dirs.source_path %><%= dirs.less %>About/main.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>About/base64.css": "<%= dirs.source_path %><%= dirs.less %>About/base64.less"
                 }
             }
         },
@@ -197,130 +186,145 @@ module.exports = function(grunt) {
                 join: true,
                 flatten: true
             },
-            manage_test: {
+            home_test: {
                 expand: true,
-                cwd: '<%= dirs.source_path %><%= dirs.ls %>CanteenManage/',
+                cwd: '<%= dirs.source_path %><%= dirs.ls %>Home/',
                 src: ['*.ls'],
-                dest: '<%= dirs.dest_path %><%= dirs.js %>CanteenManage/',
+                dest: '<%= dirs.dest_path %><%= dirs.js %>Home/',
                 ext: '.js'
             },
-            menu_category_test: {
+            product_test: {
                 expand: true,
-                cwd: '<%= dirs.source_path %><%= dirs.ls %>CanteenManageMenu/Category',
+                cwd: '<%= dirs.source_path %><%= dirs.ls %>Product',
                 src: ['*.ls'],
-                dest: '<%= dirs.dest_path %><%= dirs.js %>CanteenManageMenu/Category',
+                dest: '<%= dirs.dest_path %><%= dirs.js %>Product',
                 ext: '.js'
             },
-            menu_food_single_test: {
+            service_test: {
                 expand: true,
-                cwd: '<%= dirs.source_path %><%= dirs.ls %>CanteenManageMenu/Food/Single',
+                cwd: '<%= dirs.source_path %><%= dirs.ls %>Service',
                 src: ['*.ls'],
-                dest: '<%= dirs.dest_path %><%= dirs.js %>CanteenManageMenu/Food/Single',
+                dest: '<%= dirs.dest_path %><%= dirs.js %>Service',
                 ext: '.js'
             },
-            business_hallOrder_basic_test: {
+            coverage_test: {
                 expand: true,
-                cwd: '<%= dirs.source_path %><%= dirs.ls %>CanteenManageBusiness/HallOrder/Basic',
+                cwd: '<%= dirs.source_path %><%= dirs.ls %>Coverage',
                 src: ['*.ls'],
-                dest: '<%= dirs.dest_path %><%= dirs.js %>CanteenManageBusiness/HallOrder/Basic',
+                dest: '<%= dirs.dest_path %><%= dirs.js %>Coverage',
+                ext: '.js'
+            },
+            about_test: {
+                expand: true,
+                cwd: '<%= dirs.source_path %><%= dirs.ls %>About',
+                src: ['*.ls'],
+                dest: '<%= dirs.dest_path %><%= dirs.js %>About',
                 ext: '.js'
             }
         },
         browserify: {
-            manage_test: {
+            home_test: {
                 files: {
-                    "<%= dirs.dest_path %><%= dirs.js %>CanteenManage/main.js": ["<%= dirs.dest_path %><%= dirs.js %>CanteenManage/index.js"]
+                    "<%= dirs.dest_path %><%= dirs.js %>Home/main.js": ["<%= dirs.dest_path %><%= dirs.js %>Home/index.js"]
                 }
             },
-            menu_category_test: {
+            product_test: {
                 files: {
-                    "<%= dirs.dest_path %><%= dirs.js %>CanteenManageMenu/Category/main.js": ["<%= dirs.dest_path %><%= dirs.js %>CanteenManageMenu/Category/index.js"]
+                    "<%= dirs.dest_path %><%= dirs.js %>Product/main.js": ["<%= dirs.dest_path %><%= dirs.js %>Product/index.js"]
                 }
             },
-            menu_food_single_test: {
+            service_test: {
                 files: {
-                    "<%= dirs.dest_path %><%= dirs.js %>CanteenManageMenu/Food/Single/main.js": ["<%= dirs.dest_path %><%= dirs.js %>CanteenManageMenu/Food/Single/index.js"]
+                    "<%= dirs.dest_path %><%= dirs.js %>Service/main.js": ["<%= dirs.dest_path %><%= dirs.js %>Service/index.js"]
                 }
             },
-            business_hallOrder_basic_test: {
+            coverage_test: {
                 files: {
-                    "<%= dirs.dest_path %><%= dirs.js %>CanteenManageBusiness/HallOrder/Basic/main.js": ["<%= dirs.dest_path %><%= dirs.js %>CanteenManageBusiness/HallOrder/Basic/index.js"]
+                    "<%= dirs.dest_path %><%= dirs.js %>Coverage/main.js": ["<%= dirs.dest_path %><%= dirs.js %>Coverage/index.js"]
+                }
+            },
+            about_test: {
+                files: {
+                    "<%= dirs.dest_path %><%= dirs.js %>About/main.js": ["<%= dirs.dest_path %><%= dirs.js %>About/index.js"]
                 }
             }
         },
         watch: {
-            common: {
+            home: {
                 options: {
                     livereload: lrPort,
                     debounceDelay: debounceDelay
                 },
                 files: [
-                    "<%= dirs.source_path %><%= dirs.less %>common/**.less",
+                    '<%= dirs.source_path %>**/Home/**'
                 ],
                 tasks: [
-                    'less:common'
+                    'less:home_test',
+                    'livescript:home_test',
+                    'browserify:home_test',
+                    'jade:home_test'
                 ]
             },
-            manage: {
+            product: {
                 options: {
                     livereload: lrPort,
                     debounceDelay: debounceDelay
                 },
                 files: [
-                    '<%= dirs.source_path %>**/CanteenManage/**',
+                    '<%= dirs.source_path %>**/Product/**'
                 ],
                 tasks: [
-                    'less:manage_test',
-                    'livescript:manage_test',
-                    'browserify:manage_test',
-                    'jade:manage_test'
+                    'less:product_test',
+                    'livescript:product_test',
+                    'browserify:product_test',
+                    'jade:product_test'
                 ]
             },
-            menu_category: {
+            service: {
                 options: {
                     livereload: lrPort,
                     debounceDelay: debounceDelay
                 },
                 files: [
-                    '<%= dirs.source_path %>**/CanteenManageMenu/Category/**',
+                    '<%= dirs.source_path %>**/Service/**'
                 ],
                 tasks: [
-                    'less:menu_category_test',
-                    'livescript:menu_category_test',
-                    'browserify:menu_category_test',
-                    'jade:menu_category_test'
+                    'less:service_test',
+                    'livescript:service_test',
+                    'browserify:service_test',
+                    'jade:service_test'
                 ]
             },
-            menu_food_single: {
+            coverage: {
                 options: {
                     livereload: lrPort,
                     debounceDelay: debounceDelay
                 },
                 files: [
-                    '<%= dirs.source_path %>**/CanteenManageMenu/Food/Single/**',
+                    '<%= dirs.source_path %>**/Coverage/**',
                 ],
                 tasks: [
-                    'less:menu_food_single_test',
-                    'livescript:menu_food_single_test',
-                    'browserify:menu_food_single_test',
-                    'jade:menu_food_single_test'
+                    'less:coverage_test',
+                    'livescript:coverage_test',
+                    'browserify:coverage_test',
+                    'jade:coverage_test'
                 ]
             },
-            business_hallOrder_basic_test: {
+            about: {
                 options: {
                     livereload: lrPort,
                     debounceDelay: debounceDelay
                 },
                 files: [
-                    '<%= dirs.source_path %>**/CanteenManageBusiness/HallOrder/Basic/**',
+                    '<%= dirs.source_path %>**/About/**',
                 ],
                 tasks: [
-                    'less:business_hallOrder_basic_test',
-                    'livescript:business_hallOrder_basic_test',
-                    'browserify:business_hallOrder_basic_test',
-                    'jade:business_hallOrder_basic_test'
+                    'less:about_test',
+                    'livescript:about_test',
+                    'browserify:about_test',
+                    'jade:about_test'
                 ]
-            }
+            },
         }
     });
 

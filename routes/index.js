@@ -6,7 +6,7 @@ var renew = require('../renew');
 module.exports = function(passport) {
 
 	router.get('/', function(req, res) {
-		res.redirect('/Config');
+		res.render('./Home/develop');
 	});
 
 	router.get('/Config', function(req, res) {
