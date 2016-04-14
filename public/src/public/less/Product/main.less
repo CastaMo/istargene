@@ -86,3 +86,39 @@
         }
     }
 }
+#lab-technique {
+	background-color: @shallow-grey-color;
+	padding: 25px 0;
+	.title-field {
+		color: @deep-purple-red-color;
+		line-height: 30px;
+	}
+	.detail-field, .summary-field {
+		color: @deep-blue-color;
+	}
+	.detail-field {
+		margin-top: 80px;
+		ul.detail-list {
+			li {
+				.logo {
+					.background-size(320px, 215px);
+					.background-norm();
+				}
+				margin: 30px 0;
+				position: relative;
+				height: 215px;
+				.content-field {
+					line-height: 35px;
+					width: 600px;
+					right: 0;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.summary-field {
+		margin-top: 10px;
+		font-size: 22px;
+		line-height: 35px;
+	}
+}
