@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         // Metadata.
         pkg: grunt.file.readJSON('package.json'),
-        secret: grunt.file.readJSON('../../secret_for_formal.json'),
+        secret: grunt.file.readJSON('../sftp-config.json'),
         dirs: grunt.file.readJSON('dirs.json'),
 
         banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
