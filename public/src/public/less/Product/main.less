@@ -1,0 +1,88 @@
+@import "../common";
+#combo-purchase {
+    background-color: @shallow-silvery-color;
+    .combo-purchase-container {
+        padding: 40px 0 65px 0;
+        text-align: center;
+        color: @deep-purple-red-color;
+        .combo-select-list-field {
+            ul.combo-select-list {
+                .parallel-container;
+                li {
+                    height: 321px;
+                    width: 222px;
+                    background-color: #fff;
+                    cursor: pointer;
+                    &:not(#combo-select-3) {
+                        margin-right: 45px;
+                    }
+                    .detail-field {
+                        margin-top: 30px;
+                        line-height: 55px;
+                        font-size: 40px;
+                    }
+                    .btn-field {
+                        .btn {
+                            padding: 0;
+                            width: 137px;
+                            line-height: 40px;
+                            border: solid 4px @deep-purple-red-color;
+                            background-color: #fff;
+                            color: @deep-purple-red-color;
+                            margin: 125px auto 0 auto;
+                            float: none;
+                            font-size: 22px;
+                            &.not-open {
+                                background-color: @deep-purple-red-color;
+                                color: #fff;
+                                line-height: 48px;
+                                width: 145px;
+                                border: none;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .btn:not(.not-open) {
+                            background-color: @deep-purple-red-color;
+                            color: #fff;
+                            line-height: 48px;
+                            width: 145px;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+        .single-detect-field {
+        	margin-top: 95px;
+        	width: 100%;
+        	background-color: #fff;
+        	cursor: pointer;
+        	.detail-field {
+        		float: left;
+        		line-height: 74px;
+        		font-size: 30px;
+        	}
+        	.btn-field {
+        		float: right;
+        		.btn {
+        			padding: 0;
+        			line-height: 39px;
+        			width: 95px;
+        			margin: 13.5px 3px 13.5px 0;
+        			border: solid 3px @deep-purple-red-color;
+        			font-size: 18px;
+        		}
+        	}
+        	&:hover {
+        		.btn {
+        			background-color: @deep-purple-red-color;
+                    color: #fff;
+                    line-height: 45px;
+                    width: 101px;
+                    border: none;
+        		}
+        	}
+        }
+    }
+}
