@@ -109,7 +109,7 @@ module.exports = function(grunt) {
             },
             assets: {
                 cwd: './assets/images',
-                src: ['*'],
+                src: ['**/*'],
                 dest: '<%= dirs.dest_path %>images/',
                 expand: true
             }

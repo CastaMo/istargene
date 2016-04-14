@@ -3,8 +3,6 @@
     background-color: @shallow-grey-color;
     padding-top: 8px;
     .pic-rotate-display-wrapper {
-        width: 1023px;
-        margin: 0 auto;
         .pic-display-field {
             position: relative;
             ul {
@@ -63,8 +61,6 @@
     min-width: 1023px;
     background-color: @shallow-white-color;
     .talent-intro-wrapper {
-        width: 1023px;
-        margin: 0 auto;
         text-align: center;
         .all-talent-field {
             .all-talent-list {
@@ -138,6 +134,133 @@
                 padding: 0;
                 width: 200px;
                 font-size: 25px;
+            }
+        }
+    }
+}
+
+#child-gene-detect {
+    .child-gene-detect-wrapper {
+        .child-gene-detect-container {
+            padding-top: 40px;
+            .detect-content-field {
+                margin: 30px 0 65px 0;
+                line-height: 40px;
+                font-size: 22px;
+                span {
+                    color: @purple-red-color;
+                }
+            }
+        }
+    }
+}
+
+#why-istargene {
+    background-color: @shallow-white-color;
+    .why-istargene-wrapper {
+        .why-istargene-container {
+            padding-top: 30px;
+            .reason-field {
+                margin-top: 40px;
+                ul {
+                    .parallel-container;
+                    height: 380px;
+                    li {
+                        width: 180px;
+                        margin: 0 100px 0 50px;
+                        cursor: pointer;
+                        .pic {
+                            .background-size(135px, 135px);
+                            .background-norm();
+                        }
+                        p.title {
+                            margin-top: 32px;
+                            font-size: 25px;
+                            line-height: 40px;
+                            color: @deep-green-color;
+                        }
+                        p.content {
+                            font-size: 16px;
+                            line-height: 35px;
+                            span {
+                                color: @purple-red-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#gene-story {
+    .gene-story-container {
+        padding-top: 40px;
+        .story-list-feild {
+            margin-top: 90px;
+            ul.story-list {
+                .parallel-container;
+                height: 330px;
+                li {
+                    text-align: center;
+                    .pic {
+                        .background-size(182px, 190px);
+                        .background-norm();
+                    }
+                    &:not(#story-more) {
+                        margin-right: 90px;
+                    }
+                    p {
+                        line-height: 50px;
+                        font-size: 25px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#business-cooperate {
+    background-color: @shallow-grey-color;
+    .business-cooperate-container {
+        padding-top: 50px;
+        .cooperate-oper-field {
+            width: 100%;
+            .cooperate-oper-container {
+                width: 848px;
+                height: 70px;
+                float: right;
+                border-bottom: solid 2px @border-grey-color;
+                .cooperate-oper {
+                    float: right;
+                    .parallel-container;
+                    margin-top: 13px;
+                    > *:not(.clear) {
+                        .background-norm();
+                        .background-size(45px, 45px);
+                        cursor: pointer;
+                    }
+                    .left-oper {
+                        margin-right: 22px;
+                    }
+                }
+            }
+        }
+        .cooperate-list-field {
+            margin-top: 42px;
+            height: 180px;
+            ul.cooperate-list {
+                .parallel-container;
+                li {
+                    .pic {
+                        .background-norm();
+                        .background-size(150px, 80px);
+                    }
+                    &:not(#cooperate-5) {
+                        margin-right: 24px;
+                    }
+                }
             }
         }
     }
