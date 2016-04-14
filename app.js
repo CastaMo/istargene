@@ -9,16 +9,15 @@ var express      = require('express');
 
 // MongoDB 连接
 // require('./models');
-
-var routes = require('./routes/index');
+var passport = require("passport");
+var routes = require('./public/routes/index')(passport);
 
 var app = express();
 
 // view engine setup 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'public/src/jade'));
+app.set('view engine', 'jade');
 
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -41,9 +40,9 @@ var options = {
         res.set('x-timestamp', Date.now());
     }
 };
-app.use(express.static(path.join(__dirname, 'public'), options));
+app.use(express.static(path.join(__dirname, 'public/bin'), options));
 
-app.use('/', routes);
+app.use(routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
