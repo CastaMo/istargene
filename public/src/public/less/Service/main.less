@@ -1,1 +1,168 @@
 @import "../common";
+#purchase-way {
+    padding: 40px 0 70px 0;
+    background-color: @silvery-color;
+    .top-pic-field {
+        .top-pic-wrapper {
+            margin: 0 auto;
+            width: 845px;
+            height: 155px;
+            .purchase-way-pic {
+                .background-norm();
+                .background-size(845px, 202px);
+                height: 155px;
+                background-position: top;
+            }
+        }
+    }
+    .purchase-way-list-field {
+        ul {
+            .parallel-container;
+            li {
+                text-align: center;
+                width: 180px;
+                &#purchase-way-partner {
+                    margin: 0 241px;
+                }
+                .white-box {
+                    background-color: #fff;
+                    height: 156px;
+                    padding-top: 15px;
+                    p.c-name {
+                        color: @blue-green-color;
+                        font-size: 22px;
+                        line-height: 25px;
+                    }
+                    p.e-name {
+                        color: #909090;
+                        font-size: 13px;
+                    }
+                    p.way-name {
+                        font-size: 45px;
+                        color: @purple-red-color;
+                        line-height: 70px;
+                        margin-top: 10px;
+                    }
+                }
+                .way {
+                    margin-top: 20px;
+                    color: @blue-green-color;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+#service-flow {
+    padding: 35px 0 110px 0;
+    background-color: @shallow-silvery-color;
+    color: @blue-green-color;
+    .top-pic-field {
+        .top-pic-wrapper {
+            width: 1008px;
+            height: 246px;
+            margin: 0 auto;
+            .service-flow-pic {
+                .background-norm();
+                .background-size(1008px, 246px);
+            }
+        }
+    }
+    .step-list-field {
+        margin-top: 30px;
+        .step-list-wrapper {
+            width: 1008px;
+            margin: 0 auto;
+            ul {
+                .parallel-container;
+                li {
+                    width: 112px;
+                    height: 235px;
+                    font-size: 13px;
+                    line-height: 25px;
+                    position: relative;
+                    span {
+                        color: @purple-red-color;
+                    }
+                    &#step-0 {
+                        width: 112px;
+                    }
+                    &#step-1 {
+                        width: 133px;
+                        margin: 0 35px 0 60px;
+                    }
+                    &#step-2 {
+                        width: 133px;
+                    }
+                    &#step-3 {
+                        width: 125px;
+                        margin: 0 25px 0 40px;
+                    }
+                    &#step-4 {
+                        width: 125px;
+                    }
+                    &#step-5 {
+                        width: 154px;
+                        margin-left: 45px;
+                    }
+                    .special-line {
+                        background-color: @shallow-green-color;
+                        height: 178px;
+                        width: 2px;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .collect-description-field {
+        width: 1008px;
+        margin: 0 auto;
+        .collect-description-wrapper {
+            .title-field {
+                width: 133px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+                margin-left: 340px;
+            }
+            .subtitle-field {
+                line-height: 30px;
+            }
+            .collect-step-field {
+                .collect-all-step-field {
+                    margin-top: 20px;
+                    .collect-all-step-pic {
+                        .background-norm();
+                        .background-size(999px, 121px);
+                    }
+                }
+                ul.collect-step-list {
+                    margin-top: 25px;
+                    .parallel-container;
+                    li {
+                        width: 130px;
+                        height: 125px;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: #64645F;
+                        &#step-1 {
+                        	width: 140px;
+                            margin: 0 90px 0 92px;
+                        }
+                        &#step-2 {
+                        	width: 140px;
+                        }
+                        &#step-3 {
+                            margin: 0 78px 0 77px;
+                        }
+                    }
+                }
+            }
+            .collect-finish-field {
+            	margin-top: 20px;
+            }
+        }
+    }
+}
