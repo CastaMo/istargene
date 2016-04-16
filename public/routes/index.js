@@ -17,6 +17,10 @@ module.exports = function(passport) {
 		res.render('./Service/develop');
 	});
 
+	router.get('/Coverage', function(req, res) {
+		res.render('./Coverage/develop');
+	});
+
 	router.get('/Config', function(req, res) {
 		res.render('./CanteenManage/develop');
 	});

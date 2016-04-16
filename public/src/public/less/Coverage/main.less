@@ -1,0 +1,117 @@
+@import "../common";
+#istargene-coverage {
+    padding-top: 25px;
+    background-color: @shallow-white-color;
+    .coverage-list-field {
+        margin-top: 25px;
+        ul {
+            .parallel-container;
+            li {
+                background-color: #fff;
+                width: 314px;
+                height: 450px;
+                position: relative;
+                padding-top: 1px;
+                &#coverage-1 {
+                    margin: 0 40px;
+                }
+                .head-field {
+                    margin-top: 5px;
+                    text-align: center;
+                    color: @blue-green-color;
+                    p.title {
+                        font-size: 15px;
+                    }
+                    p.time {
+                        font-size: 12px;
+                    }
+                }
+                .body-field {
+                    margin: 25px 0 40px 0;
+                    .coverage-pic {
+                        .background-norm();
+                        .background-size(314px, 212px);
+                    }
+                }
+                .foot-field {
+                    color: @font-grey-color;
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+}
+
+#media-link {
+    padding: 30px 0 95px 0;
+    background-color: @shallow-grey-color;
+    .cooperate-oper-field {
+        width: 100%;
+        .cooperate-oper-container {
+            width: 848px;
+            height: 70px;
+            float: right;
+            .cooperate-oper {
+                float: right;
+                .parallel-container;
+                margin-top: 13px;
+                > *:not(.clear) {
+                    .background-norm();
+                    .background-size(40px, 40px);
+                    cursor: pointer;
+                }
+                .left-oper {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .link-list-field {
+        ul {
+            .parallel-container;
+            li {
+            	cursor: pointer;
+                position: relative;
+                background-color: #fff;
+                width: 90px;
+                height: 70px;
+                &.left-seperate {
+                    margin-left: 13.5px;
+                }
+                &.right-seperate {
+                    margin-right: 13.5px;
+                }
+                &#link-1 {
+                    .link-pic {
+                        .background-size(55px, 46px);
+                    }
+                }
+                .link-pic {
+                    .background-norm();
+                    .background-size(49px, 49px);
+                }
+            }
+        }
+    }
+}
+
+#video-coverage {
+    padding: 80px 0 70px 0;
+    background-color: @shallow-silvery-color;
+    .video-field {
+        video {
+            padding: 0;
+        }
+        margin-top: 40px;
+    }
+    .logo-field {
+    	margin-top: 5px;
+    	height: 32px;
+    	.all-logo {
+    		float: right;
+    		.background-norm();
+    		.background-size(202px, 32px);
+    	}
+    }
+}

@@ -103,7 +103,7 @@ module.exports = function(grunt) {
         copy: {
             test: {
                 cwd: '<%= dirs.lib_path %>',
-                src: ['<%= dirs.js %>common/*.js'],
+                src: ['<%= dirs.js %>common/*.js', '<%= dirs.css %>common/*.css'],
                 dest: '<%= dirs.dest_path %>',
                 expand: true
             },
@@ -113,7 +113,6 @@ module.exports = function(grunt) {
                 dest: '<%= dirs.dest_path %>images/',
                 expand: true
             }
-
         },
 
         /*编译jade，源文件路径设为src的根目录，src/jade里面装jade的option部分(比如你把head和script分离出来)，编译后放在bin中*/
