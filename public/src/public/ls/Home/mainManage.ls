@@ -5,8 +5,7 @@ main-manage = let
 	_init-depend-module = !->
 		rotateDisplay := require "./rotateDisplay.js"
 
-	initial: !->
-		_init-depend-module!
+	_init-rotate = !->
 		new rotateDisplay {
 			displayCSSSelector: ".pic-display-list"
 			chooseCSSSelector: ".pic-controll-list"
@@ -14,5 +13,9 @@ main-manage = let
 			leftArrowCSSSelector: ".left-arrow"
 			rightArrowCSSSelector: ".right-arrow"
 		}
+
+	initial: !->
+		_init-depend-module!
+		_init-rotate!
 
 module.exports = main-manage

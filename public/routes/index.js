@@ -13,6 +13,10 @@ module.exports = function(passport) {
 		res.render('./Product/develop');
 	});
 
+	router.get('/Service', function(req, res) {
+		res.render('./Service/develop');
+	});
+
 	router.get('/Config', function(req, res) {
 		res.render('./CanteenManage/develop');
 	});
