@@ -1,0 +1,119 @@
+@import "../common";
+#all-info {
+    background-color: @shallow-white-color;
+    padding-top: 30px;
+    .all-info-container {
+        .parallel-container;
+        height: 1155px;
+        #side-bar {
+            width: 178px;
+            .choose-list-field {
+                border-top: solid 1px @border-grey-color;
+                border-left: solid 1px @border-grey-color;
+                border-right: solid 1px @border-grey-color;
+                li {
+                    text-align: center;
+                    position: relative;
+                    cursor: pointer;
+                    color: #6C6C6C;
+                    line-height: 50px;
+                    width: 100%;
+                    border-bottom: solid 1px @border-grey-color;
+                    .choose-name {
+                        width: 176px;
+                        margin: 0 auto;
+                    }
+                    .left-line {
+                        height: 50px;
+                        width: 3px;
+                        background-color: @purple-red-color;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        display: none;
+                    }
+                    &:hover:not(.choose) {
+                        .choose-name {
+                            background-color: @grey-color;
+                        }
+                    }
+                    &.choose {
+                        .choose-name {
+                            color: @purple-red-color;
+                        }
+                        .left-line {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        #main-bar {
+            margin-left: 20px;
+            width: 825px;
+            .a-block {
+                color: #787878;
+                margin-bottom: 35px;
+                font-size: 18px;
+                line-height: 32px;
+            }
+            .body-field {
+                margin-top: 10px;
+            }
+            span {
+                color: @purple-red-color;
+            }
+            li:not(#info-0) {
+            	.hide;
+            }
+            li > * {
+            	margin-top: 10px;
+            }
+            .company-intro-field {
+                .body-field {
+                    span {
+                    	color: black;
+                        font-size: 12px;
+                        vertical-align: 6px;
+                    }
+                }
+            }
+            .parner-field {
+                .a-block {
+                    position: relative;
+                    height: 100px;
+                    width: 100%;
+                    .left-part {
+                        .partner-pic {
+                            .background-norm();
+                            .background-size(251px, 100px);
+                        }
+                    }
+                    .right-part {
+                        width: 528px;
+                        right: 0;
+                    }
+                }
+            }
+            .school-field {
+                .a-block {
+                    position: relative;
+                    height: 150px;
+                    width: 100%;
+                    .left-part {
+                        .partner-pic {
+                            .background-norm();
+                            .background-size(251px, 100px);
+                            height: 150px;
+                        }
+                    }
+                    .right-part {
+                        width: 528px;
+                        line-height: 30px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
