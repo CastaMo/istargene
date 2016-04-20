@@ -1,0 +1,461 @@
+@import "../common";
+.title-field {
+    text-align: center;
+    position: relative;
+    padding-top: 1px;
+    p.big-center-title {
+        line-height: 35px;
+        font-size: 35px;
+        padding: 0 30px;
+        border-left: solid 2px #BFBFBF;
+        border-right: solid 2px #BFBFBF;
+    }
+    p.hint {
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: 30px;
+        color: #929292;
+    }
+}
+
+#display-pic {
+    padding: 10px 0 20px 0;
+    background-color: @shallow-grey-color;
+    .display-pic-container {
+        .pic-field {
+            .display-pic {
+                .background-size(1023px, 365px);
+                .background-norm();
+            }
+        }
+    }
+}
+
+#purchase-header {
+    padding-top: 10px;
+    .purchase-header-field {
+        p.name {
+            line-height: 30px;
+            font-size: 25px;
+        }
+        p.price {
+            color: @purple-red-color;
+            font-size: 35px;
+            line-height: 50px;
+        }
+        .intro-field {
+            line-height: 35px;
+            font-size: 23px;
+        }
+    }
+}
+
+#istargene-intro {
+    padding: 20px 0;
+    .top-pic-field {
+        width: 960px;
+        margin: 0 auto;
+        .istargene-intro-pic {
+            .background-norm();
+            .background-size(960px, 370px);
+        }
+    }
+    .intro-word-field {
+        width: 800px;
+        margin: 0 auto;
+        p.content {
+            color: #929292;
+            margin-top: 5px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+    .all-gene-intro-field {
+        margin-top: 50px;
+        .title-field {
+            padding-top: 1px;
+            p.come-from {
+                margin-top: 40px;
+                color: #929292;
+                line-height: 30px;
+                font-size: 14px;
+            }
+        }
+        .content-field {
+            .background-norm();
+            .background-size(960px, 380px);
+            height: 383px;
+            background-position: bottom;
+            margin: 0 auto;
+            ul.content-list {
+                padding-top: 77px;
+                color: #929292;
+                li {
+                    height: 44px;
+                    font-size: 15px;
+                    line-height: 22px;
+                    margin: 6px 0;
+                    &#content-0 {
+                        margin-left: 380px;
+                    }
+                    &#content-1 {
+                        margin-left: 420px;
+                    }
+                    &#content-2 {
+                        margin-left: 470px;
+                    }
+                    &#content-3 {
+                        margin-left: 505px;
+                    }
+                    &#content-4 {
+                        margin-left: 555px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#single-detect {
+    margin-top: 35px;
+    .talent-upgrade-field {
+        .background-norm();
+        .background-size(960px, 407px);
+        padding-top: 1px;
+        ul.talent-upgrade-list {
+            margin: 38px 0 0 240px;
+            li {
+                line-height: 22px;
+                color: #929292;
+                p.top {
+                    color: black;
+                    font-weight: bold;
+                }
+                &#talent-upgrade-1 {
+                    margin-top: 25px;
+                }
+                &#talent-upgrade-2 {
+                    margin-top: 33px;
+                }
+                &#talent-upgrade-3 {
+                    margin-top: 15px;
+                }
+                &#talent-upgrade-4 {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .talent-field {
+        margin-top: 50px;
+        width: 880px;
+        margin: 30px auto;
+        ul.talent-type-list {
+            > li {
+                .parallel-container;
+                margin-bottom: 10px;
+                .talent-header {
+                    width: 50px;
+                    color: #929292;
+                    line-height: 30px;
+                    text-align: right;
+                }
+                ul.talent-list {
+                    .parallel-container;
+                    margin-left: 20px;
+                    li {
+                        height: 30px;
+                        line-height: 30px;
+                        width: 105px;
+                        background-color: #F2F2F2;
+                        text-align: center;
+                        margin-right: 8px;
+                        cursor: pointer;
+                        &.deep-blue {
+                            background-color: #1B6AA3;
+                            color: #fff;
+                        }
+                        &.deep-green {
+                            background-color: #3ED6BA;
+                        }
+                        &.purple-red {
+                            background-color: #F37263;
+                        }
+                        &.deep-yellow {
+                            background-color: #F8D55D;
+                        }
+                        &.shallow-blue {
+                            background-color: #7BC9EB;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .supplement-explain-field {
+        width: 880px;
+        margin: 0 auto;
+        line-height: 35px;
+        font-size: 25px;
+        &.warn-field {
+            font-size: 16px;
+            color: #929292;
+            line-height: 30px;
+        }
+    }
+}
+
+#detect-process {
+    padding-top: 80px;
+    .detect-process-wrapper {
+        width: 960px;
+        margin: 0 auto;
+    }
+    .title-field {
+        padding-top: 1px;
+    }
+    .process-field {
+        margin-top: 75px;
+        ul {
+            .background-norm();
+            .background-size(960px, 459px);
+            height: 310px;
+            background-position: bottom;
+            .parallel-container;
+            li {
+                height: 310px;
+                width: 90px;
+                p.title {
+                    font-size: 18px;
+                    line-height: 35px;
+                    font-weight: bold;
+                }
+                p.content {
+                    margin-top: 5px;
+                    color: #929292;
+                    line-height: 20px;
+                }
+                &#process-0 {
+                    margin-left: 190px;
+                    .content-field {
+                        margin-top: 50px;
+                    }
+                }
+                &#process-1 {
+                    margin-left: 60px;
+                    .content-field {
+                        margin-top: 120px;
+                    }
+                }
+                &#process-2 {
+                    margin-left: 35px;
+                    .content-field {
+                        margin-top: 60px;
+                    }
+                }
+                &#process-3 {
+                    margin-left: 60px;
+                    .content-field {
+                        margin-top: 100px;
+                    }
+                }
+                &#process-4 {
+                    margin-left: 50px;
+                    .content-field {
+                        margin-top: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#dectect-box {
+    padding-top: 70px;
+    .detect-box-wrapper {
+        width: 960px;
+        margin: 0 auto;
+        color: #929292;
+        font-size: 18px;
+        line-height: 25px;
+        .detect-box-field {
+            padding-top: 1px;
+            .background-norm();
+            .background-size(960px, 433px);
+            .content-field {
+                width: 361px;
+                margin: 180px 0 0 450px;
+            }
+        }
+        .detect-intro-field {
+            .background-norm();
+            .background-size(960px, 403px);
+            .parallel-container;
+            .science-field {
+                width: 182px;
+                margin: 196px 0 0 304px;
+            }
+            .rigorous-field {
+                width: 223px;
+                margin: 217px 0 0 235px;
+            }
+        }
+        .gene-book-field {
+            .background-norm();
+            .background-size(960px, 416px);
+            margin-top: 105px;
+            padding-top: 1px;
+            .content-field {
+                width: 400px;
+                margin: 216px 0 0 405px;
+            }
+        }
+    }
+}
+
+#sample-method {
+    padding-top: 140px;
+    .sample-method-wrapper {
+        width: 960px;
+        margin: 0 auto;
+        color: #929292;
+        .sample-method-pic {
+            .background-norm();
+            .background-size(960px, 287px);
+            background-position: top;
+            height: 195px;
+        }
+        ul.sample-method-list {
+            .parallel-container;
+            margin-top: 40px;
+            li {
+                text-align: center;
+                width: 300px;
+                font-size: 20px;
+                &#sample-method-0 {
+                    width: 224px;
+                }
+                &#sample-method-1 {
+                    width: 265px;
+                    margin: 0 105px 0 117px;
+                }
+                &#sample-method-2 {
+                    width: 165px;
+                }
+            }
+        }
+    }
+}
+#research-strength {
+    padding-top: 105px;
+    .research-strength-wrapper {
+        width: 960px;
+        margin: 0 auto;
+        color: #929292;
+        .research-strength-field {
+            .background-norm();
+            .background-size(960px, 360px);
+            margin-top: 35px;
+            .parallel-container;
+            > * {
+                width: 345px;
+                p.title {
+                    font-size: 20px;
+                }
+                p.content {
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+            }
+            .instrument-field {
+                margin: 200px 0 0 105px;
+            }
+            .team-field {
+                margin: 30px 0 0 60px;
+            }
+        }
+    }
+}
+#partner-school {
+    padding-top: 105px;
+    .partner-school-wrapper {
+        width: 960px;
+        margin: 0 auto;
+        color: #929292;
+        .partner-school-field {
+            .background-norm();
+            .background-size(960px, 360px);
+            margin-top: 35px;
+            .parallel-container;
+            > * {
+                width: 345px;
+                p.title {
+                    font-size: 20px;
+                }
+                p.content {
+                    margin-top: 15px;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+            .left-field {
+                margin: 200px 0 0 105px;
+            }
+            .right-field {
+                margin: 20px 0 0 60px;
+            }
+        }
+    }
+}
+#reference {
+    padding-top: 140px;
+    .reference-wrapper {
+        width: 750px;
+        margin: 0 auto;
+        color: #929292;
+        .content-field {
+            margin-top: 35px;
+            font-size: 20px;
+            line-height: 35px;
+        }
+    }
+}
+#footer {
+    padding: 70px 0 190px;
+    .footer-wrapper {
+        width: 960px;
+        margin: 0 auto;
+        color: #929292;
+        .footer-field {
+            padding-top: 1px;
+            .background-norm();
+            .background-size(960px, 544px);
+            .explain-list-field {
+                margin-top: 178px;
+                line-height: 30px;
+                ul.explain-list {
+                    .parallel-container;
+                    li {
+                        line-height: 30px;
+                        font-size: 20px;
+                        &#explain-0 {
+                            margin-left: 108px;
+                        }
+                        &#explain-1 {
+                            margin-left: 72px;
+                        }
+                        &#explain-2 {
+                            margin-left: 50px;
+                        }
+                    }
+                }
+            }
+            .warn-field {
+                font-size: 14px;
+                width: 428px;
+                line-height: 20px;
+                margin: 190px 0 0 90px;
+            }
+        }
+    }
+}

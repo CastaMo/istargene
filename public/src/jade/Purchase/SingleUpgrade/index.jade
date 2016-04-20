@@ -1,0 +1,46 @@
+extends ../index
+
+block displayPic
+	.display-pic(style="background-image:url('/images/purchase/purchase-1.png')")
+
+block purchaseHeader
+	.purchase-header-field
+		p.name SMART单项检测升级版
+		p.price ￥ 9800.00
+		.intro-field
+			p.type
+				b 种类
+				：S天赋（运动）、M天赋（音乐）、A天赋（绘画）、R天赋（科学）、T天赋（舞蹈）
+			p.standard
+				b 规格
+				：男孩、女孩
+			p.freight
+				b 运费
+				：免运费
+
+block content
+	#single-detect
+		.single-detect-wrapper.top-wrapper
+			.title-field
+				p.big-center-title.tile.horizontal-center 单项检测升级版
+				p.hint 在25000个基因、30亿个碱基对中，找出影响9-13种影响天赋的位点
+			.talent-upgrade-field(style="background-image:url('/images/purchase/single-upgrade-background.png');")
+				ul.talent-upgrade-list
+					li#talent-upgrade-0
+						p.top 骨骼强度、肌肉发育、有氧代谢能力、爆发力
+						p.bottom 运动保护力、运动积极性、耐力、运动后体能恢复、无氧代谢能力
+					li#talent-upgrade-1
+						p.top 节奏感、绝对音高、音乐感受力、音准
+						p.bottom 音乐创造力、音乐表现力、识谱记谱、歌唱能力、音乐治愈
+					li#talent-upgrade-2
+						p.top 形象思维、操作智商、空间思维、色彩敏感度
+						p.bottom 创造力、想象力、记忆力、观察力、视觉感受力
+					li#talent-upgrade-3
+						p.top 专注力、计算能力、长期记忆、抗压能力、逻辑思维、分析能力、反应能力
+						p.bottom 实践能力、信息处理速度、计划能力、阅读能力、短期记忆、避错能力、
+					li#talent-upgrade-4
+						p.top 柔韧度、平衡感、即兴表演、体型
+						p.bottom 舞台空间感、骨密度、舞蹈节奏感、协调性、情绪表达能力
+					
+			.supplement-explain-field
+				p 您可以任意选择其中一项天赋进行单项基因检测，每一类天赋包括4-5小项，可精准判断孩子的潜在能力。

@@ -147,6 +147,21 @@ module.exports = function(grunt) {
                 files: {
                     "<%= dirs.dest_path %>About/About.html": "<%= dirs.source_path %><%= dirs.jade %>About/develop.jade"
                 }
+            },
+            single_basic_test: {
+                files: {
+                    "<%= dirs.dest_path %>Purchase/SingleBasic/SingleBasic.html": "<%= dirs.source_path %><%= dirs.jade %>Purchase/SingleBasic/develop.jade"
+                }
+            },
+            single_upgrade_test: {
+                files: {
+                    "<%= dirs.dest_path %>Purchase/SingleUpgrade/SingleUpgrade.html": "<%= dirs.source_path %><%= dirs.jade %>Purchase/SingleUpgrade/develop.jade"
+                }
+            },
+            total_basic_test: {
+                files: {
+                    "<%= dirs.dest_path %>Purchase/TotalBasic/TotalBasic.html": "<%= dirs.source_path %><%= dirs.jade %>Purchase/TotalBasic/develop.jade"
+                }
             }
         },
         less: {
@@ -182,6 +197,24 @@ module.exports = function(grunt) {
                 files: {
                     "<%= dirs.dest_path %><%= dirs.css %>About/main.css": "<%= dirs.source_path %><%= dirs.less %>About/main.less",
                     "<%= dirs.dest_path %><%= dirs.css %>About/base64.css": "<%= dirs.source_path %><%= dirs.less %>About/base64.less"
+                }
+            },
+            single_basic_test: {
+                files: {
+                    "<%= dirs.dest_path %><%= dirs.css %>Purchase/SingleBasic/main.css": "<%= dirs.source_path %><%= dirs.less %>Purchase/SingleBasic/main.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>Purchase/SingleBasic/base64.css": "<%= dirs.source_path %><%= dirs.less %>Purchase/SingleBasic/base64.less"
+                }
+            },
+            single_upgrade_test: {
+                files: {
+                    "<%= dirs.dest_path %><%= dirs.css %>Purchase/SingleUpgrade/main.css": "<%= dirs.source_path %><%= dirs.less %>Purchase/SingleUpgrade/main.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>Purchase/SingleUpgrade/base64.css": "<%= dirs.source_path %><%= dirs.less %>Purchase/SingleUpgrade/base64.less"
+                }
+            },
+            total_basic_test: {
+                files: {
+                    "<%= dirs.dest_path %><%= dirs.css %>Purchase/TotalBasic/main.css": "<%= dirs.source_path %><%= dirs.less %>Purchase/TotalBasic/main.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>Purchase/TotalBasic/base64.css": "<%= dirs.source_path %><%= dirs.less %>Purchase/TotalBasic/base64.less"
                 }
             }
         },
@@ -225,6 +258,27 @@ module.exports = function(grunt) {
                 src: ['*.ls'],
                 dest: '<%= dirs.dest_path %><%= dirs.js %>About',
                 ext: '.js'
+            },
+            single_basic_test: {
+                expand: true,
+                cwd: '<%= dirs.source_path %><%= dirs.ls %>Purchase/SingleBasic',
+                src: ['*.ls'],
+                dest: '<%= dirs.dest_path %><%= dirs.js %>Purchase/SingleBasic',
+                ext: '.js'
+            },
+            single_upgrade_test: {
+                expand: true,
+                cwd: '<%= dirs.source_path %><%= dirs.ls %>Purchase/SingleUpgrade',
+                src: ['*.ls'],
+                dest: '<%= dirs.dest_path %><%= dirs.js %>Purchase/SingleUpgrade',
+                ext: '.js'
+            },
+            total_basic_test: {
+                expand: true,
+                cwd: '<%= dirs.source_path %><%= dirs.ls %>Purchase/TotalBasic',
+                src: ['*.ls'],
+                dest: '<%= dirs.dest_path %><%= dirs.js %>Purchase/TotalBasic',
+                ext: '.js'
             }
         },
         browserify: {
@@ -251,6 +305,21 @@ module.exports = function(grunt) {
             about_test: {
                 files: {
                     "<%= dirs.dest_path %><%= dirs.js %>About/main.js": ["<%= dirs.dest_path %><%= dirs.js %>About/index.js"]
+                }
+            },
+            single_basic_test: {
+                files: {
+                    "<%= dirs.dest_path %><%= dirs.js %>Purchase/SingleBasic/main.js": ["<%= dirs.dest_path %><%= dirs.js %>Purchase/SingleBasic/index.js"]
+                }
+            },
+            single_upgrade_test: {
+                files: {
+                    "<%= dirs.dest_path %><%= dirs.js %>Purchase/SingleUpgrade/main.js": ["<%= dirs.dest_path %><%= dirs.js %>Purchase/SingleUpgrade/index.js"]
+                }
+            },
+            total_basic_test: {
+                files: {
+                    "<%= dirs.dest_path %><%= dirs.js %>Purchase/TotalBasic/main.js": ["<%= dirs.dest_path %><%= dirs.js %>Purchase/TotalBasic/index.js"]
                 }
             }
         },
@@ -330,6 +399,51 @@ module.exports = function(grunt) {
                     'jade:about_test'
                 ]
             },
+            single_basic_test: {
+                options: {
+                    livereload: lrPort,
+                    debounceDelay: debounceDelay
+                },
+                files: [
+                    '<%= dirs.source_path %>**/Purchase/SingleBasic/**',
+                ],
+                tasks: [
+                    'less:single_basic_test',
+                    'livescript:single_basic_test',
+                    'browserify:single_basic_test',
+                    'jade:single_basic_test'
+                ]
+            },
+            single_upgrade_test: {
+                options: {
+                    livereload: lrPort,
+                    debounceDelay: debounceDelay
+                },
+                files: [
+                    '<%= dirs.source_path %>**/Purchase/SingleUpgrade/**',
+                ],
+                tasks: [
+                    'less:single_upgrade_test',
+                    'livescript:single_upgrade_test',
+                    'browserify:single_upgrade_test',
+                    'jade:single_upgrade_test'
+                ]
+            },
+            total_basic_test: {
+                options: {
+                    livereload: lrPort,
+                    debounceDelay: debounceDelay
+                },
+                files: [
+                    '<%= dirs.source_path %>**/Purchase/TotalBasic/**',
+                ],
+                tasks: [
+                    'less:total_basic_test',
+                    'livescript:total_basic_test',
+                    'browserify:total_basic_test',
+                    'jade:total_basic_test'
+                ]
+            }
         }
     });
 

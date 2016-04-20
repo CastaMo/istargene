@@ -1,0 +1,99 @@
+extends ../index
+
+block displayPic
+	.display-pic(style="background-image:url('/images/purchase/purchase-0.png')")
+
+block purchaseHeader
+	.purchase-header-field
+		p.name SMART单项检测基础版
+		p.price ￥ 4900.00
+		.intro-field
+			p.type
+				b 种类
+				：S天赋（运动）、M天赋（音乐）、A天赋（绘画）、R天赋（科学）、T天赋（舞蹈）
+			p.standard
+				b 规格
+				：男孩、女孩
+			p.freight
+				b 运费
+				：免运费
+
+block content
+	#single-detect
+		.single-detect-wrapper.top-wrapper
+			.title-field
+				p.big-center-title.tile.horizontal-center 单项检测基础版
+				p.hint 在25000个基因、30亿个碱基对中，找出影响4-5种影响天赋的位点
+			.talent-field
+				ul.talent-type-list
+					li#talent-S
+						.talent-header
+							p S天赋
+						ul.talent-list
+							li 骨骼强度
+							li.deep-blue 肌肉发育
+							li 有氧代谢能力
+							li 爆发力
+							li.deep-blue 
+							li 
+							li
+							.clear
+						.clear
+							
+					li#talent-M
+						.talent-header
+							p M天赋
+						ul.talent-list
+							li 节奏感
+							li 绝对音高
+							li.deep-green 音乐感受力
+							li 音准
+							li 
+							li 
+							li 
+							.clear
+						.clear
+							
+					li#talent-A
+						.talent-header
+							p A天赋
+						ul.talent-list
+							li 形象思维
+							li 操作智商
+							li 空间思维
+							li 色彩敏感度
+							li.purple-red
+							li 
+							li 
+							.clear
+						.clear
+							
+					li#talent-R
+						.talent-header
+							p R天赋
+						ul.talent-list
+							li 专注力
+							li 计算能力
+							li 长期记忆
+							li.deep-yellow 抗压能力
+							li 逻辑思维
+							li.deep-yellow
+							li 
+							.clear
+						.clear
+							
+					li#talent-T
+						.talent-header
+							p T天赋
+						ul.talent-list
+							li.shallow-blue 柔韧度
+							li 平衡感
+							li 即兴表演
+							li 体型
+							li 
+							li 
+							li.shallow-blue
+							.clear
+						.clear
+			.supplement-explain-field
+				p 您可以任意选择其中一项天赋进行单项基因检测，每一类天赋包括4-5小项，可精准判断孩子的潜在能力。
