@@ -15,7 +15,7 @@
     "password": "",
     "port": "22",
     
-    "remote_path": "/root/Project/istargene",
+    "remote_path": "/home/Project/istargene",
     "ignore_regexes": [
         "\\.sublime-(project|workspace)", "sftp-config(-alt\\d?)?\\.json",
         "sftp-settings\\.json", "/venv/", "\\.svn/", "\\.hg/", "\\.git/",

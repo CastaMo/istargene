@@ -32,7 +32,7 @@ app.use(requestLog);
 var options = {
     dotfiles    : 'ignore',
     etag        : false,
-    extensions  : ['htm', 'html'],
+    extensions  : ['htm', 'html', 'png'],
     index       : false,
     maxAge      : '1d',
     redirect    : false,
@@ -40,7 +40,7 @@ var options = {
         res.set('x-timestamp', Date.now());
     }
 };
-app.use(express.static(path.join(__dirname, 'public/bin'), options));
+app.use(express.static(path.join(__dirname, 'static'), options));
 
 app.use(routes);
 
