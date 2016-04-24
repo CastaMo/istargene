@@ -13,6 +13,7 @@ module.exports = function(grunt) {
     // 使用 middleware(中间件)，就必须关闭 LiveReload 的浏览器插件
     var serveStatic = require('serve-static');
     var serveIndex = require('serve-index');
+    var md5File = require('md5-file');
     var lrMiddleware = function(connect, options, middlwares) {
         return [
             lrSnippet,
@@ -26,9 +27,9 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         // Metadata.
-        pkg: grunt.file.readJSON('package.json'),
-        secret: grunt.file.readJSON('../sftp-config.json'),
-        dirs: grunt.file.readJSON('dirs.json'),
+        pkg    : grunt.file.readJSON('package.json'),
+        secret : grunt.file.readJSON('../sftp-config.json'),
+        dirs   : grunt.file.readJSON('dirs.json'),
 
         banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
             '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
@@ -100,6 +101,10 @@ module.exports = function(grunt) {
             }
         },
 
+        clean: {
+            views: ['./views/']
+        },
+
         copy: {
             test: {
                 cwd: '<%= dirs.lib_path %>',
@@ -112,6 +117,90 @@ module.exports = function(grunt) {
                 src: ['**/*'],
                 dest: '<%= dirs.dest_path %>images/',
                 expand: true
+            },
+            versioncontrol: {
+                options : {
+                    process: function (content, srcpath) {
+                        var commonMap = {
+                            utiljs: {
+                                reg: /(util\.js)((\?v=)(\w+))?/g,
+                                path: 'bin/public/js/common/util.js',
+                                prefix: 'util.js?v='
+                            }
+                        };
+
+                        var pageMap =  {
+                            mainCss: {
+                                reg   : /(?:\/public\/css\/)(\S+)(?:\/main\.css)(?:(?:\?v=)(?:\w+))?/g,
+                                path  : 'bin/public/css/{page}/main.css',
+                                prefix: '/public/css/{page}/main.css?v='
+                            },
+                            base64Css: {
+                                reg: /(?:\/public\/css\/)(\S+)(?:\/base64\.css)(?:(?:\?v=)(?:\w+))?/g,
+                                path: 'bin/public/css/{page}/base64.css',
+                                prefix: '/public/css/{page}/base64.css?v='
+                            },
+                            mainJs: {
+                                reg: /(?:\/public\/js\/)(\S+)(?:\/main\.js)(?:(?:\?v=)(?:\w+))?/g,
+                                path: 'bin/public/js/{page}/main.js',
+                                prefix: '/public/js/{page}/main.js?v='
+                            },
+                        };
+
+                        for ( var key in commonMap ) {
+                            content = content.replace(commonMap[key].reg, commonMap[key].prefix + md5File(commonMap[key].path).substring(0, 10));
+                        }
+
+                        for ( var key in pageMap ) {
+                            var found = pageMap[key].reg.exec(content);
+
+                            if (!found )
+                                continue;
+
+                            var file    = pageMap[key].path.replace('{page}', found[1]),
+                                fileMd5 = md5File(file).substring(0, 10),
+                                prefix  = pageMap[key].prefix.replace('{page}', found[1]);
+
+                            content = content.replace(found[0], prefix + fileMd5);
+                        }
+
+                        return content;
+                    }
+                },
+                files: [
+                    {
+                        src: './bin/Home/Home.html',
+                        dest: './views/Home.html'
+                    },
+                    {
+                        src: './bin/About/About.html',
+                        dest: './views/About.html'
+                    },
+                    {
+                        src: './bin/Coverage/Coverage.html',
+                        dest: './views/Coverage.html'
+                    },
+                    {
+                        src: './bin/Product/Product.html',
+                        dest: './views/Product.html'
+                    },
+                    {
+                        src: './bin/Service/Service.html',
+                        dest: './views/Service.html'
+                    },
+                    {
+                        src: './bin/Purchase/SingleBasic/SingleBasic.html',
+                        dest: './views/SingleBasic.html'
+                    },
+                    {
+                        src: './bin/Purchase/SingleUpgrade/SingleUpgrade.html',
+                        dest: './views/SingleUpgrade.html'
+                    },
+                    {
+                        src: './bin/Purchase/TotalBasic/TotalBasic.html',
+                        dest: './views/TotalBasic.html'
+                    }
+                ]
             }
         },
 
@@ -164,6 +253,8 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+
         less: {
             options: {
                 compress: false,
@@ -491,5 +582,9 @@ module.exports = function(grunt) {
     ]);
     grunt.registerTask('backup', [
         'copy:backup',
+    ]);
+    grunt.registerTask('versioncontrol', [
+        'clean:views',
+        'copy:versioncontrol'
     ]);
 };

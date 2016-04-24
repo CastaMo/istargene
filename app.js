@@ -9,14 +9,20 @@ var express      = require('express');
 
 // MongoDB 连接
 // require('./models');
-var passport = require("passport");
-var routes = require('./public/routes/index')(passport);
+// var passport = require("passport");
+// var routes = require('./public/routes/index')(passport);
+var routes= require('./routes');
 
 var app = express();
 
 // view engine setup 
-app.set('views', path.join(__dirname, 'public/src/jade'));
-app.set('view engine', 'jade');
+// app.set('views', path.join(__dirname, 'views/bin'));
+// app.set('view engine', 'html');
+var consolidate = require('consolidate');
+// Use handlebars as template engine
+app.engine("html", consolidate.handlebars);
+app.set("view engine", "html");
+app.set("views", __dirname + "/views");
 
 app.use(logger('dev'));
 app.use(bodyParser.json());

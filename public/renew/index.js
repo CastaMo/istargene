@@ -1,26 +1,28 @@
-var path = require('path');
-var hashmap = require('../hashmap');
-var fs = require("fs");
-
+var path    = require('path'),
+    hashmap = require('../hashmap'),
+    fs      = require("fs");
 
 module.exports = (function() {
+    // 文件映射表
     var _allURL = {
-        mainjsURL: "public/js/main.js",
-        utiljsURL: "public/js/common/util.js",
-        maincssURL: "public/css/main.css",
-        min_mainjsURL: "public/js/main.min.js",
-        min_extrajsURL: "public/js/common/extra.min.js",
-        min_maincssURL: "public/css/main.min.css",
-        base64_maincssURL: "public/css/base64.min.css"
+        mainjsURL         : "public/js/main.js",
+        utiljsURL         : "public/js/common/util.js",
+        maincssURL        : "public/css/main.css",
+        min_mainjsURL     : "public/js/main.min.js",
+        min_extrajsURL    : "public/js/common/extra.min.js",
+        min_maincssURL    : "public/css/main.min.css",
+        base64_maincssURL : "public/css/base64.min.css"
     };
 
     var _getAllVersionUrl = function() {
         var results_ = {};
+        
         for (var key in _allURL) {
             var url = _allURL[key];
             results_[key] = hashmap.static_url(url);
         }
-        return results_
+
+        return results_;
     };
 
     var _writeVersionToSourceFolderAndRender = function(res, callback) {

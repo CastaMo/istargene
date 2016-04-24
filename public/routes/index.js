@@ -1,7 +1,8 @@
-var express = require('express');
-var app = express();
-var router = express.Router();
-var renew = require('../renew');
+
+var express = require('express'),
+	app     = express(),
+	router  = express.Router(),
+	renew   = require('../renew');
 
 module.exports = function(passport) {
 
