@@ -48,7 +48,8 @@
 
 #media-link {
     padding: 30px 0 95px 0;
-    background-color: @shallow-grey-color;
+    //background-color: @shallow-grey-color;
+    background-color: #fff;
     .cooperate-oper-field {
         width: 100%;
         .cooperate-oper-container {
@@ -74,25 +75,16 @@
         ul {
             .parallel-container;
             li {
-            	cursor: pointer;
-                position: relative;
                 background-color: #fff;
-                width: 90px;
-                height: 70px;
-                &.left-seperate {
-                    margin-left: 13.5px;
-                }
-                &.right-seperate {
-                    margin-right: 13.5px;
-                }
-                &#link-1 {
-                    .link-pic {
-                        .background-size(55px, 46px);
-                    }
+                width: 110px;
+                height: 40px;
+                margin: 6px 0;
+                & {
+                    margin-right: 20px;
                 }
                 .link-pic {
                     .background-norm();
-                    .background-size(49px, 49px);
+                    .background-size(110px, 40px);
                 }
             }
         }
