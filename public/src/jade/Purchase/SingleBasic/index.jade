@@ -5,8 +5,13 @@ block displayPic
 
 block purchaseHeader
 	.purchase-header-field
-		p.name SMART单项检测基础版
-		p.price ￥ 4900.00
+		.top-field.parallel-container
+			.word-field
+				p.name SMART单项检测基础版
+				p.price ￥ 4900.00
+			.QR-code-field
+				#single-basic-QR-code.pic
+			.clear
 		.intro-field
 			p.type
 				b 种类
