@@ -379,19 +379,13 @@ a {
   float: right;
 }
 #combo-purchase .combo-purchase-container .single-detect-field .btn-field .btn {
-  padding: 0;
-  line-height: 39px;
-  width: 95px;
-  margin: 13.5px 3px 13.5px 0;
-  border: solid 3px #E1584B;
-  font-size: 18px;
-}
-#combo-purchase .combo-purchase-container .single-detect-field:hover .btn {
   background-color: #E1584B;
   color: #fff;
+  padding: 0;
   line-height: 45px;
   width: 101px;
-  border: none;
+  margin: 13.5px 3px 13.5px 0;
+  font-size: 18px;
 }
 #lab-technique {
   background-color: #F2F5F5;

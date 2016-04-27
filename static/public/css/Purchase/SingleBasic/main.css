@@ -347,7 +347,7 @@ a {
   width: 1000px;
 }
 #purchase-header .purchase-header-field .top-field .word-field {
-  margin: 25px 0;
+  margin: 50px 0;
 }
 #purchase-header .purchase-header-field .top-field .QR-code-field {
   float: right;
@@ -358,6 +358,9 @@ a {
   height: 130px;
   width: 130px;
   background-size: 130px 130px;
+}
+#purchase-header .purchase-header-field .top-field .p-field {
+  color: #E7655A;
 }
 #purchase-header .purchase-header-field p.name {
   line-height: 30px;

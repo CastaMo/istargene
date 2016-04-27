@@ -16,7 +16,6 @@ page-manage = let
 			$(@).fade-out 200
 
 	_toggle-page-callback = (seq-num)->
-		console.log seq-num
 		_unchoose-all!
 		_hide-all!
 		$(_all-choose[seq-num]).add-class "choose"

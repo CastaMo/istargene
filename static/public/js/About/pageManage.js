@@ -17,7 +17,6 @@ pageManage = (function(){
     });
   };
   _togglePageCallback = function(seqNum){
-    console.log(seqNum);
     _unchooseAll();
     _hideAll();
     $(_allChoose[seqNum]).addClass("choose");

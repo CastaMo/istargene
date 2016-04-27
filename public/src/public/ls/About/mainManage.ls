@@ -1,5 +1,7 @@
 main-manage = let
 
+	[addListener] = [util.addListener]
+
 	rotateDisplay = null
 	page = null
 
@@ -24,12 +26,20 @@ main-manage = let
 	_init-page-toggle = !->
 		_all-choose = $ "\#all-info .choose-list li"
 		for let dom, i in _all-choose
-			console.log i
-			$(dom).click -> page.toggle-page i
+			$(dom).click -> window.location.hash = i
+
+	_check-hash = ->
+		num = window.location.hash
+		if num = num.replace("#", "")
+			page.toggle-page num
+
+	_init-hash-event = ->
+		addListener window, "popstate", -> _check-hash!
 
 	initial: !->
 		_init-depend-module!
 		_init-rotate!
 		_init-page-toggle!
-
+		_check-hash!
+		_init-hash-event!
 module.exports = main-manage
