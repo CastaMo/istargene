@@ -535,6 +535,36 @@ module.exports = function(grunt) {
                     'jade:total_basic_test'
                 ]
             }
+        },
+        sftp: {
+            options: {
+                host: '<%= secret.host %>',
+                username: '<%= secret.user %>',
+                password: '<%= secret.password %>',
+                showProgress: true,
+                srcBasePath: "<%= dirs.dest_path %>",
+                port: '<%= secret.port %>',
+                createDirectories: true
+            },
+            config: {
+                options: {
+                    path: "/Project/istargene"
+                },
+                files: {
+                    "./": ["<%= dirs.dest_path %>public/**/*"]
+                }
+            }
+        },
+        sshexec: {
+            test: {
+                command: [  'sh -c "cd Project/istargene; ls; ./deploy.sh"',
+                            'sh -c "ls"'],
+                options: {
+                    host: '<%= secret.host %>',
+                    username: '<%= secret.user %>',
+                    password: '<%= secret.password %>'
+                }
+            }
         }
     });
 

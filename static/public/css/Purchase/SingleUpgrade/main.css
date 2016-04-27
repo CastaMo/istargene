@@ -282,6 +282,9 @@ a {
   font-size: 20px;
   line-height: 40px;
 }
+#istargene #istargene-footer #basic-info .basic-info-wrapper .basic-info-container .intro-field > * ul a {
+  color: #fff;
+}
 #istargene #istargene-footer #basic-info .basic-info-wrapper .basic-info-container .intro-field > * ul li {
   font-size: 17px;
   line-height: 35px;
@@ -340,6 +343,22 @@ a {
 #purchase-header {
   padding-top: 10px;
 }
+#purchase-header .purchase-header-field .top-field {
+  width: 1000px;
+}
+#purchase-header .purchase-header-field .top-field .word-field {
+  margin: 25px 0;
+}
+#purchase-header .purchase-header-field .top-field .QR-code-field {
+  float: right;
+}
+#purchase-header .purchase-header-field .top-field .QR-code-field .pic {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  width: 130px;
+  background-size: 130px 130px;
+}
 #purchase-header .purchase-header-field p.name {
   line-height: 30px;
   font-size: 25px;
@@ -353,8 +372,61 @@ a {
   line-height: 35px;
   font-size: 23px;
 }
+#istargene-all-gene-intro {
+  padding: 20px 0;
+}
+#istargene-all-gene-intro .all-gene-intro-field {
+  margin-top: 50px;
+}
+#istargene-all-gene-intro .all-gene-intro-field .title-field {
+  padding-top: 1px;
+}
+#istargene-all-gene-intro .all-gene-intro-field .title-field p.come-from {
+  margin-top: 40px;
+  color: #929292;
+  line-height: 30px;
+  font-size: 14px;
+}
+#istargene-all-gene-intro .all-gene-intro-field .content-field {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 380px;
+  width: 960px;
+  background-size: 960px 380px;
+  height: 383px;
+  background-position: bottom;
+  margin: 0 auto;
+}
+#istargene-all-gene-intro .all-gene-intro-field .content-field ul.content-list {
+  padding-top: 77px;
+  color: #929292;
+}
+#istargene-all-gene-intro .all-gene-intro-field .content-field ul.content-list li {
+  height: 44px;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 6px 0;
+}
+#istargene-all-gene-intro .all-gene-intro-field .content-field ul.content-list li#content-0 {
+  margin-left: 380px;
+}
+#istargene-all-gene-intro .all-gene-intro-field .content-field ul.content-list li#content-1 {
+  margin-left: 420px;
+}
+#istargene-all-gene-intro .all-gene-intro-field .content-field ul.content-list li#content-2 {
+  margin-left: 470px;
+}
+#istargene-all-gene-intro .all-gene-intro-field .content-field ul.content-list li#content-3 {
+  margin-left: 505px;
+}
+#istargene-all-gene-intro .all-gene-intro-field .content-field ul.content-list li#content-4 {
+  margin-left: 555px;
+}
 #istargene-intro {
   padding: 20px 0;
+}
+#istargene-intro .istargene-intro-container {
+  margin-top: 50px;
 }
 #istargene-intro .top-pic-field {
   width: 960px;
@@ -376,53 +448,6 @@ a {
   margin-top: 5px;
   font-size: 18px;
   line-height: 25px;
-}
-#istargene-intro .all-gene-intro-field {
-  margin-top: 50px;
-}
-#istargene-intro .all-gene-intro-field .title-field {
-  padding-top: 1px;
-}
-#istargene-intro .all-gene-intro-field .title-field p.come-from {
-  margin-top: 40px;
-  color: #929292;
-  line-height: 30px;
-  font-size: 14px;
-}
-#istargene-intro .all-gene-intro-field .content-field {
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 380px;
-  width: 960px;
-  background-size: 960px 380px;
-  height: 383px;
-  background-position: bottom;
-  margin: 0 auto;
-}
-#istargene-intro .all-gene-intro-field .content-field ul.content-list {
-  padding-top: 77px;
-  color: #929292;
-}
-#istargene-intro .all-gene-intro-field .content-field ul.content-list li {
-  height: 44px;
-  font-size: 15px;
-  line-height: 22px;
-  margin: 6px 0;
-}
-#istargene-intro .all-gene-intro-field .content-field ul.content-list li#content-0 {
-  margin-left: 380px;
-}
-#istargene-intro .all-gene-intro-field .content-field ul.content-list li#content-1 {
-  margin-left: 420px;
-}
-#istargene-intro .all-gene-intro-field .content-field ul.content-list li#content-2 {
-  margin-left: 470px;
-}
-#istargene-intro .all-gene-intro-field .content-field ul.content-list li#content-3 {
-  margin-left: 505px;
-}
-#istargene-intro .all-gene-intro-field .content-field ul.content-list li#content-4 {
-  margin-left: 555px;
 }
 #single-detect {
   margin-top: 35px;

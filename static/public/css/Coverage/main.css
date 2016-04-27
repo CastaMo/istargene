@@ -282,6 +282,9 @@ a {
   font-size: 20px;
   line-height: 40px;
 }
+#istargene #istargene-footer #basic-info .basic-info-wrapper .basic-info-container .intro-field > * ul a {
+  color: #fff;
+}
 #istargene #istargene-footer #basic-info .basic-info-wrapper .basic-info-container .intro-field > * ul li {
   font-size: 17px;
   line-height: 35px;
@@ -359,7 +362,11 @@ a {
 }
 #media-link {
   padding: 30px 0 95px 0;
-  background-color: #F2F5F5;
+  background-color: #fff;
+}
+#media-link .media-link-wrapper {
+  width: 900px;
+  text-align: center;
 }
 #media-link .cooperate-oper-field {
   width: 100%;
@@ -387,33 +394,25 @@ a {
 #media-link .cooperate-oper-field .cooperate-oper-container .cooperate-oper .left-oper {
   margin-right: 10px;
 }
+#media-link .link-list-field ul {
+  margin-top: 20px;
+}
 #media-link .link-list-field ul > *:not(.clear) {
   float: left;
 }
 #media-link .link-list-field ul li {
-  cursor: pointer;
-  position: relative;
   background-color: #fff;
-  width: 90px;
-  height: 70px;
-}
-#media-link .link-list-field ul li.left-seperate {
-  margin-left: 13.5px;
-}
-#media-link .link-list-field ul li.right-seperate {
-  margin-right: 13.5px;
-}
-#media-link .link-list-field ul li#link-1 .link-pic {
-  height: 46px;
-  width: 55px;
-  background-size: 55px 46px;
+  width: 110px;
+  height: 40px;
+  margin: 20px 0;
+  margin-right: 40px;
 }
 #media-link .link-list-field ul li .link-pic {
   background-repeat: no-repeat;
   background-position: center;
-  height: 49px;
-  width: 49px;
-  background-size: 49px 49px;
+  height: 40px;
+  width: 110px;
+  background-size: 110px 40px;
 }
 #video-coverage {
   padding: 80px 0 70px 0;

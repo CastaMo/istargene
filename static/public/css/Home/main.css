@@ -282,6 +282,9 @@ a {
   font-size: 20px;
   line-height: 40px;
 }
+#istargene #istargene-footer #basic-info .basic-info-wrapper .basic-info-container .intro-field > * ul a {
+  color: #fff;
+}
 #istargene #istargene-footer #basic-info .basic-info-wrapper .basic-info-container .intro-field > * ul li {
   font-size: 17px;
   line-height: 35px;
@@ -320,7 +323,6 @@ a {
   float: left;
 }
 #talent-intro .talent-intro-wrapper .all-talent-field .all-talent-list li {
-  cursor: pointer;
   width: 150px;
   margin: 0 25px;
 }
@@ -336,7 +338,7 @@ a {
   background-position: center;
 }
 #talent-intro .talent-intro-wrapper .all-talent-field .all-talent-list li .word-field {
-  margin: 20px 10px 0 10px;
+  margin: 20px 10px 40px 10px;
   line-height: 18.667px;
   font-size: 12px;
   height: 112px;
@@ -418,7 +420,6 @@ a {
 #why-istargene .why-istargene-wrapper .why-istargene-container .reason-field ul li {
   width: 180px;
   margin: 0 100px 0 50px;
-  cursor: pointer;
 }
 #why-istargene .why-istargene-wrapper .why-istargene-container .reason-field ul li .pic {
   height: 135px;
