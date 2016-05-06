@@ -189,6 +189,10 @@ module.exports = function(grunt) {
                         dest: './views/Service.html'
                     },
                     {
+                        src: './bin/Story/Story.html',
+                        dest: './views/Story.html'
+                    },
+                    {
                         src: './bin/Purchase/SingleBasic/SingleBasic.html',
                         dest: './views/SingleBasic.html'
                     },
@@ -235,6 +239,11 @@ module.exports = function(grunt) {
             about_test: {
                 files: {
                     "<%= dirs.dest_path %>About/About.html": "<%= dirs.source_path %><%= dirs.jade %>About/develop.jade"
+                }
+            },
+            story_test: {
+                files: {
+                    "<%= dirs.dest_path %>Story/Story.html": "<%= dirs.source_path %><%= dirs.jade %>Story/develop.jade"
                 }
             },
             single_basic_test: {
@@ -288,6 +297,12 @@ module.exports = function(grunt) {
                 files: {
                     "<%= dirs.dest_path %><%= dirs.css %>About/main.css": "<%= dirs.source_path %><%= dirs.less %>About/main.less",
                     "<%= dirs.dest_path %><%= dirs.css %>About/base64.css": "<%= dirs.source_path %><%= dirs.less %>About/base64.less"
+                }
+            },
+            story_test: {
+                files: {
+                    "<%= dirs.dest_path %><%= dirs.css %>Story/main.css": "<%= dirs.source_path %><%= dirs.less %>Story/main.less",
+                    "<%= dirs.dest_path %><%= dirs.css %>Story/base64.css": "<%= dirs.source_path %><%= dirs.less %>Story/base64.less"
                 }
             },
             single_basic_test: {
@@ -350,6 +365,13 @@ module.exports = function(grunt) {
                 dest: '<%= dirs.dest_path %><%= dirs.js %>About',
                 ext: '.js'
             },
+            story_test: {
+                expand: true,
+                cwd: '<%= dirs.source_path %><%= dirs.ls %>Story',
+                src: ['*.ls'],
+                dest: '<%= dirs.dest_path %><%= dirs.js %>Story',
+                ext: '.js'
+            },
             single_basic_test: {
                 expand: true,
                 cwd: '<%= dirs.source_path %><%= dirs.ls %>Purchase/SingleBasic',
@@ -396,6 +418,11 @@ module.exports = function(grunt) {
             about_test: {
                 files: {
                     "<%= dirs.dest_path %><%= dirs.js %>About/main.js": ["<%= dirs.dest_path %><%= dirs.js %>About/index.js"]
+                }
+            },
+            story_test: {
+                files: {
+                    "<%= dirs.dest_path %><%= dirs.js %>Story/main.js": ["<%= dirs.dest_path %><%= dirs.js %>Story/index.js"]
                 }
             },
             single_basic_test: {
@@ -488,6 +515,21 @@ module.exports = function(grunt) {
                     'livescript:about_test',
                     'browserify:about_test',
                     'jade:about_test'
+                ]
+            },
+            story: {
+                options: {
+                    livereload: lrPort,
+                    debounceDelay: debounceDelay
+                },
+                files: [
+                    '<%= dirs.source_path %>**/Story/**',
+                ],
+                tasks: [
+                    'less:story_test',
+                    'livescript:story_test',
+                    'browserify:story_test',
+                    'jade:story_test'
                 ]
             },
             single_basic_test: {

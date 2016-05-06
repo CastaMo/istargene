@@ -431,9 +431,14 @@ a {
 #istargene-intro .istargene-intro-container {
   margin-top: 50px;
 }
+#istargene-intro .title-field {
+  padding-top: 1px;
+  height: 30px;
+  color: #929292;
+}
 #istargene-intro .top-pic-field {
   width: 960px;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
 }
 #istargene-intro .top-pic-field .istargene-intro-pic {
   background-repeat: no-repeat;

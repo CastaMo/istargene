@@ -119,6 +119,9 @@ pageManage = (function(){
   return {
     initial: function(){},
     togglePage: function(seqNum){
+      setTimeout(function(){
+        return _allChoose[0].parentNode.scrollIntoView();
+      }, 0);
       return _togglePageCallback(seqNum);
     }
   };

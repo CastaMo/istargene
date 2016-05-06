@@ -26,6 +26,10 @@ module.exports = function(passport) {
 		res.render('./About/develop');
 	});
 
+	router.get('/Story', function(req, res) {
+		res.render('./Story/develop');
+	});
+
 	router.get('/Purchase/SingleBasic', function(req, res) {
 		res.render('./Purchase/SingleBasic/develop');
 	});

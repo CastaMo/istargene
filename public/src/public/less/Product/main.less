@@ -4,52 +4,71 @@
     .combo-purchase-container {
         padding: 40px 0 65px 0;
         text-align: center;
-        color: @deep-purple-red-color;
+        color: #fff;
         .combo-select-list-field {
             ul.combo-select-list {
                 .parallel-container;
                 li {
+                    .background-norm();
+                    .background-size(222px, 321px);
                     height: 321px;
                     width: 222px;
-                    background-color: #fff;
                     cursor: pointer;
                     a {
-                        color: @deep-purple-red-color;
+                        color: #fff;
                     }
                     &:not(#combo-select-3) {
                         margin-right: 45px;
                     }
+                    &#combo-select-0, &#combo-select-1 {
+                        p.top {
+                            font-size: 45px;
+                        }
+                        p.bottom {
+                            margin-top: 10px;
+                            font-size: 55px;
+                        }
+                    }
+                    &#combo-select-2, &#combo-select-3 {
+                        p.top {
+                            font-size: 45px;
+                        }
+                        p.bottom {
+                            margin-top: 10px;
+                            font-size: 35px;
+                        }
+                    }
                     .detail-field {
-                        margin-top: 30px;
+                        margin-top: 50px;
                         line-height: 55px;
-                        font-size: 40px;
                     }
                     .btn-field {
                         .btn {
                             padding: 0;
-                            width: 137px;
-                            line-height: 40px;
-                            border: solid 4px @deep-purple-red-color;
+                            width: 144px;
+                            line-height: 30px;
+                            border: solid 3px #42DFE5;
                             background-color: #fff;
-                            color: @deep-purple-red-color;
-                            margin: 125px auto 0 auto;
+                            color: #999999;
+                            margin: 95px auto 0 auto;
                             float: none;
                             font-size: 22px;
+                            .rounded-corners(50px);
                             &.not-open {
-                                background-color: @deep-purple-red-color;
+                                background-color: #42DFE5;
                                 color: #fff;
-                                line-height: 48px;
-                                width: 145px;
-                                border: none;
+                                width: 144px;
+                                line-height: 30px;
+                                border: solid 3px #42DFE5;
                             }
                         }
                     }
                     &:hover {
                         .btn:not(.not-open) {
-                            background-color: @deep-purple-red-color;
+                            background-color: #42DFE5;
                             color: #fff;
-                            line-height: 48px;
-                            width: 145px;
+                            line-height: 36px;
+                            width: 150px;
                             border: none;
                         }
                     }
@@ -57,63 +76,69 @@
             }
         }
         .single-detect-field {
-        	margin-top: 95px;
-        	width: 100%;
-        	background-color: #fff;
-        	cursor: pointer;
-        	.detail-field {
-        		float: left;
-        		line-height: 74px;
-        		font-size: 30px;
-        	}
-        	.btn-field {
-        		float: right;
-        		.btn {
-                    background-color: @deep-purple-red-color;
+            margin-top: 95px;
+            width: 100%;
+            background-color: #A9E6EA;
+            cursor: pointer;
+            .detail-field {
+                float: left;
+                margin-left: 20px;
+                line-height: 74px;
+                font-size: 30px;
+            }
+            .btn-field {
+                float: right;
+                margin-right: 20px;
+                margin-top: 19px;
+                .btn {
+                    .rounded-corners(50px);
+                    font-size: 22px;
+                    padding: 0;
+                    background-color: #42DFE5;
                     color: #fff;
-        			padding: 0;
-        			line-height: 45px;
-        			width: 101px;
-        			margin: 13.5px 3px 13.5px 0;
-        			font-size: 18px;
-        		}
-        	}
+                    width: 144px;
+                    line-height: 30px;
+                    border: solid 3px #42DFE5;
+                }
+            }
         }
     }
 }
+
 #lab-technique {
-	background-color: @shallow-grey-color;
-	padding: 25px 0;
-	.title-field {
-		color: @deep-purple-red-color;
-		line-height: 30px;
-	}
-	.detail-field, .summary-field {
-		color: @deep-blue-color;
-	}
-	.detail-field {
-		margin-top: 80px;
-		ul.detail-list {
-			li {
-				.logo {
-					.background-size(320px, 215px);
-					.background-norm();
-				}
-				margin: 30px 0;
-				position: relative;
-				height: 215px;
-				.content-field {
-					line-height: 35px;
-					width: 600px;
-					right: 0;
-					font-size: 18px;
-				}
-			}
-		}
-	}
-	.summary-field {
-		margin-top: 10px;
-		font-size: 22px;
-		line-height: 35px;
-	}
+    background-color: @shallow-grey-color;
+    padding: 25px 0;
+    .title-field {
+        color: @deep-purple-red-color;
+        line-height: 30px;
+    }
+    .detail-field,
+    .summary-field {
+        color: @deep-blue-color;
+    }
+    .detail-field {
+        margin-top: 80px;
+        ul.detail-list {
+            li {
+                .logo {
+                    .background-size(320px, 215px);
+                    .background-norm();
+                }
+                margin: 30px 0;
+                position: relative;
+                height: 215px;
+                .content-field {
+                    line-height: 35px;
+                    width: 600px;
+                    right: 0;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .summary-field {
+        margin-top: 10px;
+        font-size: 22px;
+        line-height: 35px;
+    }
 }

@@ -23,6 +23,6 @@ page-manage = let
 		
 	initial: ->
 
-	toggle-page: (seq-num)-> _toggle-page-callback seq-num
+	toggle-page: (seq-num)-> set-timeout (-> _all-choose[0].parent-node.scrollIntoView!), 0; _toggle-page-callback seq-num
 
 module.exports = page-manage

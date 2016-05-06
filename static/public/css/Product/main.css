@@ -317,75 +317,107 @@ a {
 #combo-purchase .combo-purchase-container {
   padding: 40px 0 65px 0;
   text-align: center;
-  color: #E1584B;
+  color: #fff;
 }
 #combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list > *:not(.clear) {
   float: left;
 }
 #combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 222px 321px;
   height: 321px;
   width: 222px;
-  background-color: #fff;
   cursor: pointer;
 }
 #combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li a {
-  color: #E1584B;
+  color: #fff;
 }
 #combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li:not(#combo-select-3) {
   margin-right: 45px;
 }
+#combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li#combo-select-0 p.top,
+#combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li#combo-select-1 p.top {
+  font-size: 45px;
+}
+#combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li#combo-select-0 p.bottom,
+#combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li#combo-select-1 p.bottom {
+  margin-top: 10px;
+  font-size: 55px;
+}
+#combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li#combo-select-2 p.top,
+#combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li#combo-select-3 p.top {
+  font-size: 45px;
+}
+#combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li#combo-select-2 p.bottom,
+#combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li#combo-select-3 p.bottom {
+  margin-top: 10px;
+  font-size: 35px;
+}
 #combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li .detail-field {
-  margin-top: 30px;
+  margin-top: 50px;
   line-height: 55px;
-  font-size: 40px;
 }
 #combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li .btn-field .btn {
   padding: 0;
-  width: 137px;
-  line-height: 40px;
-  border: solid 4px #E1584B;
+  width: 144px;
+  line-height: 30px;
+  border: solid 3px #42DFE5;
   background-color: #fff;
-  color: #E1584B;
-  margin: 125px auto 0 auto;
+  color: #999999;
+  margin: 95px auto 0 auto;
   float: none;
   font-size: 22px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
 }
 #combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li .btn-field .btn.not-open {
-  background-color: #E1584B;
+  background-color: #42DFE5;
   color: #fff;
-  line-height: 48px;
-  width: 145px;
-  border: none;
+  width: 144px;
+  line-height: 30px;
+  border: solid 3px #42DFE5;
 }
 #combo-purchase .combo-purchase-container .combo-select-list-field ul.combo-select-list li:hover .btn:not(.not-open) {
-  background-color: #E1584B;
+  background-color: #42DFE5;
   color: #fff;
-  line-height: 48px;
-  width: 145px;
+  line-height: 36px;
+  width: 150px;
   border: none;
 }
 #combo-purchase .combo-purchase-container .single-detect-field {
   margin-top: 95px;
   width: 100%;
-  background-color: #fff;
+  background-color: #A9E6EA;
   cursor: pointer;
 }
 #combo-purchase .combo-purchase-container .single-detect-field .detail-field {
   float: left;
+  margin-left: 20px;
   line-height: 74px;
   font-size: 30px;
 }
 #combo-purchase .combo-purchase-container .single-detect-field .btn-field {
   float: right;
+  margin-right: 20px;
+  margin-top: 19px;
 }
 #combo-purchase .combo-purchase-container .single-detect-field .btn-field .btn {
-  background-color: #E1584B;
-  color: #fff;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  font-size: 22px;
   padding: 0;
-  line-height: 45px;
-  width: 101px;
-  margin: 13.5px 3px 13.5px 0;
-  font-size: 18px;
+  background-color: #42DFE5;
+  color: #fff;
+  width: 144px;
+  line-height: 30px;
+  border: solid 3px #42DFE5;
 }
 #lab-technique {
   background-color: #F2F5F5;
